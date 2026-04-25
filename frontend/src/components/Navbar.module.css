@@ -93,7 +93,7 @@ body {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #111;
+    background: #925B8B;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -112,4 +112,41 @@ body {
   .active {
     display: flex;
   }
+}
+
+
+/* =========================
+   ANIMATIONS (SAFE ADDITION)
+========================= */
+
+/* Smooth dropdown animation */
+.navLinks {
+  transition: all 0.3s ease-in-out;
+}
+
+/* When menu opens */
+.active {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Slide + fade animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth hamburger rotation feel (optional visual polish) */
+.hamburger {
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
 }
