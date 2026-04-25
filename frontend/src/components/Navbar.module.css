@@ -1,34 +1,49 @@
-.navbar {
-  color: #9A9B9C; 
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between; /* Space out logo and links */
-  align-items: center;
+
+
+/* Global fix (optional but recommended) */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  color: #9A9B9C;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* keeps logo left, links right */
+  align-items: center;
+  width: 100%; /* ensures no overflow */
+}
+
+/* Logo */
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  margin-left: 8rem;
-  color: #9A9B9C; 
+  color: #9A9B9C;
   text-decoration: none;
-
+  margin-left: 0; /* ✅ FIXED (removed 8rem causing overflow) */
 }
 
+/* Nav links container */
 .navLinks {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Arrange links horizontally */
+  display: flex;
   align-items: center;
 }
 
+/* Individual links */
 .navLinks li {
-  margin-left: 20px; /* Space between links */
+  margin-left: 20px;
 }
 
 .navLinks li:first-child {
-  margin-left: 0; /* No margin for the first link */
+  margin-left: 0;
 }
 
 .navLinks a {
@@ -41,4 +56,33 @@
   color: #bbb;
 }
 
-  
+
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navLinks li {
+    margin: 10px 0;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+  }
+}
+
