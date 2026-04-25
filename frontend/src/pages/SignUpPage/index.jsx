@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SignUpPage.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 import { toast } from "react-toastify";
 
@@ -96,7 +97,7 @@ function SignUpPage() {
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <p className={styles.loginLink}>
-          Already have an account? <a href="/login">Log in</a>
+          Already have an account? <Link to="/login">Log in</Link>
         </p>
       </div>
     </div>

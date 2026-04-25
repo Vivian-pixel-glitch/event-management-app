@@ -4,7 +4,7 @@ const { verifyToken } = require("../middleware/verifyToken");
 
 const route = express.Router();
 
-route.post("/sign-up", signup);
+route.post("/signup", signup);
 route.post("/login", login);
 route.get("/user", verifyToken, getCurrentUser);
 
