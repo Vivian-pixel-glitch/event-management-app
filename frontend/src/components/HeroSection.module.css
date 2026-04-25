@@ -1,0 +1,65 @@
+.heroContainer {
+  background-image: url('your-event-image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.heroContent {
+  width: 800px; /* Adjust as needed */
+  height: 20rem;
+  padding: 20px;
+  background-color: #665EB9; 
+  border-radius: 10px;
+  background-image: url('https://i.pinimg.com/736x/c6/65/20/c66520aa9812887898bfeec8789d208f.jpg'); 
+  background-size: contain;
+}
+
+.heroTitle {
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.heroSubtitle {
+  font-size: 1.1em; /* Adjust as needed */
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: white;
+}
+
+.heroButton {
+  background-color: #007bff; /* Bootstrap's primary color */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+a{
+  text-decoration: none;
+}
+
+.carousel img {
+  object-fit: cover;
+  width: 800px; /* Adjust as needed */
+  height: 20rem;
+}
+
+
+h2{
+  font-family: "Roboto", sans-serif;
+}
+

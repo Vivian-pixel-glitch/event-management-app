@@ -1,0 +1,34 @@
+.featuresContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .featureCard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .iconContainer {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .featureCard h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .featureCard p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  

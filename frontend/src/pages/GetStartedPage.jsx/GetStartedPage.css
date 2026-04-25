@@ -1,0 +1,167 @@
+/* GetStartedPage.css */
+
+.get-started-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .steps {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .steps h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .steps ol {
+    list-style-type: decimal;
+    margin-top: 20px;
+  }
+  
+  .sign-up-form {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .sign-up-form input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .sign-up-form .cta-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tutorial {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .testimonials {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .testimonials blockquote {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .cta-section {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .cta-button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .faq {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .faq ul {
+    list-style-type: none;
+  }
+  
+  .faq ul li {
+    margin: 10px 0;
+  }
+  
+  .progress-bar-container {
+    margin: 40px 0;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #007bff;
+  }
+  
+  .intro-video {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .activation-prompt {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .pricing {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .pricing .plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .plan {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .plan h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .plan p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .plan .cta-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,35 @@
+.ctaContainer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.ctaContainer h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.ctaContainer p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #e65100;
+}

@@ -1,0 +1,49 @@
+.past-tech-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .conference {
+   
+    border-left: 5px solid #007acc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .conference h3 {
+    margin-top: 0;
+  }
+  
+  
+  .conference blockquote {
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    color: #555;
+  }
+
+  .pastTechContainer {
+    max-width: 600px; 
+    margin: 0 auto;
+   
+  }
+  
+  /* .conference {
+    margin-bottom: 40px;
+  } */
+  
+  .carousel {
+    /* margin-bottom: 30px; */
+    /* border-radius: 8px; */
+    overflow: hidden;
+  }
+  .carouselImage {
+    height: 200px !important; /* or 80px for a slimmer look */ 
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  
+  
+  

@@ -1,0 +1,169 @@
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.topFooter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footerSection {
+  margin-bottom: 20px;
+  text-align: left;
+  min-width: 200px;
+}
+
+.footerSection h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footerSection p {
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.socialIcons {
+  display: flex; /* Make social icons display in a row */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+
+.icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  color: #007bff;
+}
+
+.facebook {
+  /* Style for Facebook icon/link */
+  background-color: #1877f2;
+}
+.facebook:hover{
+   background-color: #1261c6;
+}
+
+.twitter {
+  /* Style for Twitter icon/link */
+  background-color: #1da1f2;
+}
+
+.twitter:hover {
+  background-color: #0d95e8;
+}
+
+.instagram {
+  /* Style for Instagram icon/link */
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e5664d 25%,
+    #d62979 50%,
+    #c91183 75%,
+    #6851a5 100%
+  );
+}
+
+.instagram:hover {
+  opacity: 0.9;
+}
+
+.linkedin {
+  /* Style for LinkedIn icon/link */
+  background-color: #0077b5;
+}
+
+.linkedin:hover {
+  background-color: #004a82;
+}
+
+.x {
+  /* Style for X icon/link */
+  background-color: #000000;
+}
+
+.x:hover {
+  background-color: #1a1a1a;
+}
+
+.bottomFooter {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bottomFooter p {
+  margin-bottom: 0;
+  color: #ddd;
+}
+
+.bottomFooter a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottomFooter a:hover {
+  color: #fff;
+}
+
+.privacySection {
+  text-align: left;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.privacyText {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.socialIcons a{
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.socialIcons a:only-child{
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+
+

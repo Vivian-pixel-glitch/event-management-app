@@ -1,0 +1,23 @@
+.testimonialCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .rating {
+    color: #ffc107; /* Gold */
+  }

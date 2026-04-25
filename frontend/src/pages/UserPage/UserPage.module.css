@@ -1,0 +1,24 @@
+
+.newpage {
+  background-color: black;
+  color: white;
+  min-height: 100vh; 
+  padding: 20px; 
+}
+.white-input {
+    color: white !important;
+    background-color: transparent; 
+  }
+  .white-input::placeholder {
+    color: rgba(255, 255, 255, 0.5); 
+  }
+  
+  .navbar-black-border {
+    background-color: black !important;
+    border: 1px solid grey;
+  }
+  .welcome{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
