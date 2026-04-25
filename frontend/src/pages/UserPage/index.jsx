@@ -17,7 +17,7 @@ function Index() {
 
       try {
         const token = localStorage.getItem("authToken");
-        const res = await fetch("http://localhost:3000/api/events/user", {
+       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/events/user`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
