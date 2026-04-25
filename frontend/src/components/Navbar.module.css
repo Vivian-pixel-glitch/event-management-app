@@ -1,6 +1,6 @@
-
-
-/* Global fix (optional but recommended) */
+/* =========================
+   GLOBAL FIX (keep safe)
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -9,14 +9,17 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR BASE
+========================= */
 .navbar {
   color: #9A9B9C;
   padding: 15px 20px;
   display: flex;
-  justify-content: space-between; /* keeps logo left, links right */
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* ensures no overflow */
+  width: 100%;
+  position: relative; /* important for mobile dropdown */
 }
 
 /* Logo */
@@ -25,10 +28,12 @@ body {
   font-weight: bold;
   color: #9A9B9C;
   text-decoration: none;
-  margin-left: 0; /* ✅ FIXED (removed 8rem causing overflow) */
+  margin-left: 0;
 }
 
-/* Nav links container */
+/* =========================
+   NAV LINKS (DESKTOP)
+========================= */
 .navLinks {
   list-style: none;
   padding: 0;
@@ -37,7 +42,7 @@ body {
   align-items: center;
 }
 
-/* Individual links */
+/* spacing between links */
 .navLinks li {
   margin-left: 20px;
 }
@@ -46,43 +51,65 @@ body {
   margin-left: 0;
 }
 
-.navLinks a {
+/* link styles */
+.navLinks a,
+.navLink {
   color: #7C7C7F;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.navLinks a:hover {
+.navLinks a:hover,
+.navLink:hover {
   color: #bbb;
 }
 
+/* =========================
+   HAMBURGER ICON
+========================= */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #9A9B9C;
+}
 
-
-/* 📱 MOBILE RESPONSIVENESS */
+/* =========================
+   MOBILE STYLES
+========================= */
 @media (max-width: 768px) {
 
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .logo {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  .hamburger {
+    display: block;
   }
 
   .navLinks {
-    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    /* hidden by default */
+    display: none;
+
+    z-index: 1000;
   }
 
   .navLinks li {
-    margin: 10px 0;
+    margin: 15px 0;
   }
 
-  .navLinks a {
-    display: block;
-    width: 100%;
+  /* when menu is open */
+  .active {
+    display: flex;
   }
 }
-

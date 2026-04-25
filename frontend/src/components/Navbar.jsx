@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'; // ✅ added useState
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 import styles from './Navbar.module.css';
@@ -7,29 +7,41 @@ function Navbar() {
   const location = useLocation();
   const { isLoggedIn, logout, user } = useAuth();
 
+  const [menuOpen, setMenuOpen] = useState(false); // ✅ NEW
+
   const userInitial = (user?.firstName?.charAt(0) || "U").toUpperCase();
 
   return (
     <nav className={styles.navbar}>
       <Link to="/" className={styles.logo}>EventSphere</Link>
-      <ul className={styles.navLinks}>
+
+      {/* ✅ Hamburger */}
+      <div
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✖" : "☰"}
+      </div>
+
+      {/* ✅ UPDATED CLASS */}
+      <ul className={`${styles.navLinks} ${menuOpen ? styles.active : ""}`}>
         {location.pathname !== "/" && (
-          <li><Link to="/" className={styles.navLink}>Home</Link></li>
+          <li><Link to="/" className={styles.navLink} onClick={() => setMenuOpen(false)}>Home</Link></li>
         )}
         {location.pathname !== "/about" && (
-          <li><Link to="/about" className={styles.navLink}>About</Link></li>
+          <li><Link to="/about" className={styles.navLink} onClick={() => setMenuOpen(false)}>About</Link></li>
         )}
         {location.pathname !== "/contact" && (
-          <li><Link to="/contact" className={styles.navLink}>Contacts</Link></li>
+          <li><Link to="/contact" className={styles.navLink} onClick={() => setMenuOpen(false)}>Contacts</Link></li>
         )}
 
         {!isLoggedIn ? (
           <>
             {location.pathname !== "/signup" && (
-              <li><Link to="/signup" className={styles.navLink}>Sign up</Link></li>
+              <li><Link to="/signup" className={styles.navLink} onClick={() => setMenuOpen(false)}>Sign up</Link></li>
             )}
             {location.pathname !== "/login" && (
-              <li><Link to="/login" className={styles.navLink}>Login</Link></li>
+              <li><Link to="/login" className={styles.navLink} onClick={() => setMenuOpen(false)}>Login</Link></li>
             )}
           </>
         ) : (
@@ -57,7 +69,10 @@ function Navbar() {
 
             <li>
               <button
-                onClick={logout}
+                onClick={() => {
+                  logout();
+                  setMenuOpen(false); // ✅ close menu on logout
+                }}
                 className={styles.navLink}
                 style={{ background: "none", border: "none", cursor: "pointer" }}
               >
