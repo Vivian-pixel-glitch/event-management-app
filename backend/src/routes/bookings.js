@@ -1,7 +1,7 @@
 // routes/bookings.js
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User'); // Make sure this path is correct for your project
+const User = require('../models/user'); // Make sure this path is correct for your project
 
 // POST /book-event
 router.post('/book-event', async (req, res) => {
