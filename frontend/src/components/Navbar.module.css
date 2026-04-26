@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: relative; /* important for mobile dropdown */
+  position: relative;
 }
 
 /* Logo */
@@ -42,7 +42,7 @@ body {
   align-items: center;
 }
 
-/* spacing between links */
+/* spacing */
 .navLinks li {
   margin-left: 20px;
 }
@@ -51,17 +51,19 @@ body {
   margin-left: 0;
 }
 
-/* link styles */
+/* links */
 .navLinks a,
 .navLink {
   color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* hover glow */
 .navLinks a:hover,
 .navLink:hover {
-  color: #bbb;
+  color: #d8b4ff;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.9);
 }
 
 /* =========================
@@ -72,6 +74,11 @@ body {
   font-size: 1.8em;
   cursor: pointer;
   color: #925B8B;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
 }
 
 /* =========================
@@ -89,19 +96,24 @@ body {
     display: block;
   }
 
+  /* dropdown menu */
   .navLinks {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #925B8B;
+
+    /* glass effect instead of solid background */
+    background: rgba(146, 91, 139, 0.15);
+    backdrop-filter: blur(10px);
+
     width: 100%;
     flex-direction: column;
     align-items: center;
 
-    /* hidden by default */
     display: none;
-
     z-index: 1000;
+
+    transition: all 0.3s ease-in-out;
   }
 
   .navLinks li {
@@ -111,86 +123,33 @@ body {
   /* when menu is open */
   .active {
     display: flex;
+    animation: fadeOnly 0.2s ease forwards;
   }
-}
 
-
-/* =========================
-   ANIMATIONS (SAFE ADDITION)
-========================= */
-
-/* Smooth dropdown animation */
-.navLinks {
-  transition: all 0.3s ease-in-out;
-}
-
-/* When menu opens */
-.active {
-  display: flex;
-  animation: slideDown 0.3s ease forwards;
-}
-
-/* Slide + fade animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  @keyframes fadeOnly {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* Smooth hamburger rotation feel (optional visual polish) */
-.hamburger {
-  transition: transform 0.3s ease;
-}
-
-.hamburger:hover {
-  transform: rotate(90deg);
-}
-
-/* =========================
-   STAGGERED SLIDE ANIMATION
-========================= */
-
-/* base hidden state for mobile items */
-@media (max-width: 768px) {
+  /* =========================
+     STAGGERED ANIMATION
+  ========================= */
 
   .navLinks li {
     opacity: 0;
     transform: translateX(40px);
-    animation: none;
   }
 
-  /* when menu opens, animate items */
   .active li {
     animation: slideInRight 0.4s ease forwards;
   }
 
-  /* stagger delays */
-  .active li:nth-child(1) {
-    animation-delay: 0.05s;
-  }
+  .active li:nth-child(1) { animation-delay: 0.05s; }
+  .active li:nth-child(2) { animation-delay: 0.15s; }
+  .active li:nth-child(3) { animation-delay: 0.25s; }
+  .active li:nth-child(4) { animation-delay: 0.35s; }
+  .active li:nth-child(5) { animation-delay: 0.45s; }
 
-  .active li:nth-child(2) {
-    animation-delay: 0.15s;
-  }
-
-  .active li:nth-child(3) {
-    animation-delay: 0.25s;
-  }
-
-  .active li:nth-child(4) {
-    animation-delay: 0.35s;
-  }
-
-  .active li:nth-child(5) {
-    animation-delay: 0.45s;
-  }
-
-  /* animation keyframe */
   @keyframes slideInRight {
     from {
       opacity: 0;
@@ -200,5 +159,11 @@ body {
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  /* purple glow while animating */
+  .active li a,
+  .active li .navLink {
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
   }
 }
