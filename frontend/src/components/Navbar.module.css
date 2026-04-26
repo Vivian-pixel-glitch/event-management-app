@@ -54,7 +54,7 @@ body {
 /* link styles */
 .navLinks a,
 .navLink {
-  color: #7C7C7F;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -71,7 +71,7 @@ body {
   display: none;
   font-size: 1.8em;
   cursor: pointer;
-  color: #9A9B9C;
+  color: #925B8B;
 }
 
 /* =========================
@@ -149,4 +149,56 @@ body {
 
 .hamburger:hover {
   transform: rotate(90deg);
+}
+
+/* =========================
+   STAGGERED SLIDE ANIMATION
+========================= */
+
+/* base hidden state for mobile items */
+@media (max-width: 768px) {
+
+  .navLinks li {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: none;
+  }
+
+  /* when menu opens, animate items */
+  .active li {
+    animation: slideInRight 0.4s ease forwards;
+  }
+
+  /* stagger delays */
+  .active li:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .active li:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  .active li:nth-child(3) {
+    animation-delay: 0.25s;
+  }
+
+  .active li:nth-child(4) {
+    animation-delay: 0.35s;
+  }
+
+  .active li:nth-child(5) {
+    animation-delay: 0.45s;
+  }
+
+  /* animation keyframe */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
